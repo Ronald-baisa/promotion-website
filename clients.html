@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title></title>
+</head>
+<style>
+  p {
+    color: white;
+    margin: 30px;
+    line-height: 2em;
+    font-family: "Times New Roman";
+  }
+</style>
+<body>
+  <div class="">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div class="nav"
+<span onclick="openNav()"><i class="fa fa-bars "></i></span>
+</div>
+
+<div id="main">
+<center><img id="logo" src="logo.jpg" height="35px" width="35px"></center>
+<h1>Clients</h1>
+<p><br><br>
+  Dear [client],
+<br><br>
+We are excited to have the opportunity to work with you on your front-end development project. At [Company Name], we pride ourselves on delivering quality results for our clients. To give you an idea of the quality of our work, we recently completed a successful front-end development project for one of our clients.
+<br><br>
+The project involved creating a modern, user-friendly website with a focus on front-end development. Our team worked diligently to ensure that the website was optimized for speed and usability, while also offering a visually attractive experience. In the end, the client was extremely pleased with the results, and the website has been performing extremely well.
+<br><br>
+We are confident that we can replicate this success for your project as well. Our team has the technical expertise and creative vision to deliver the highest quality results. We look forward to discussing the details of your project and helping you bring your vision to life.
+<br><br>
+Sincerely, 
+[Your Name]
+</p>
+<br><br><br><br><br><br><br>
+</div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+  document.getElementById("main").style.marginLeft = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+</script>
+</body>
+</html>
