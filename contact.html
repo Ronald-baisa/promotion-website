@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title></title>
+</head>
+<style>
+form {
+  text-align: center;
+  line-height: 5em;
+  
+}
+label {
+  color: white;
+  font-family: "Times New Roman";
+}
+#name {
+  position: relative;
+  left: 15px;
+  height: 40px;
+  width: 250px;
+  font-family: "Times New Roman";
+}
+#email {
+  position: relative;
+  left: 15px;
+  height: 40px;
+  width: 250px;
+  font-family: "Times New Roman";
+}
+#subject {
+  position: relative;
+  left: 10px;
+  height: 40px;
+  width: 250px;
+  font-family: "Times New Roman";
+}
+#comment {
+  position: relative;
+  top: -80px;
+  font-family: "Times New Roman";
+}
+#textbox {
+  position: relative;
+  top: 10px;
+  height: 100px;
+  width: 250px;
+  font-family: "Times New Roman";
+}
+#btn {
+  width: 350px;
+  height: 50px;
+  font-family: "Times New Roman";
+}
+.hr-lines:before{
+  content:" ";
+  display: block;
+  height: 2px;
+  width: 130px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: red;
+}
+#fb {
+  font-family: "Times New Roman";
+  font-size: 20px;
+  position: relative;
+  top: 50px;
+}
+#fb-img {
+  position: relative;
+  top: 100px;
+}
+.social {
+  text-align: center;
+}
+#fb-social {
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 50px;
+  font-family: "Times New Roman";
+}
+#email-social {
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 58px;
+  font-family: "Times New Roman";
+}
+</style>
+<body>
+  <div class="">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="clients.html">Clients</a>
+  <a href="about.html">About</a>
+</div>
+<div class="nav"
+<span onclick="openNav()"><i class="fa fa-bars "></i></span>
+</div>
+
+<div id="main">
+<center><img id="logo" src="logo.jpg" height="35px" width="35px"></center>
+<h1>Contact</h1><br><br><br>
+<form>
+    <label class="" for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Input Your Name"><br>
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email" placeholder="Input Your Email" required><br>
+    <label for="subject">Subject:</label>
+    <input type="text" name="subject" id="subject" placeholder="Input Your Subject"><br>
+    <label id="comment" for="comment">Comment:</label>
+    <textarea name="comment" id="textbox" placeholder="What In Your Mind?"></textarea><br>
+    <input id="btn"type="submit" name="submit" value="Send" required>
+</form>
+<div class="social">
+<a href="https://www.facebook.com/profile.php?id=100087406047151&mibextid=ZbWKwL"><button id="fb-social" >Message Us On Facebook</button></a>
+<a href="https://m.facebook.com/100087406047151/"><button id="email-social">Follow Us</button></a>
+  </div>
+  <br><br><br><br><br><br>
+</div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+  document.getElementById("main").style.marginLeft = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+</body>
+</html>

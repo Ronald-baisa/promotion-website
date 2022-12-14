@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title></title>
+</head>
+<style>
+.banner {
+  position: relative;
+  top: -30px;
+  width: 100%;
+  height: 25vh;
+}
+p {
+  margin: 10px;
+  color: white;
+  font-family: "Times New Roman";
+}
+</style>
+<body>
+  <div class="">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="services.html">Services</a>
+  <a href="clients.html">Clients</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div class="nav"
+<a onclick="openNav()">
+  <i class="fa fa-bars "></i>
+  </a>
+</div>
+
+<div id="main">
+<center><img id="logo" src="logo.jpg" height="35px" width="35px"></center>
+<img src="img1.png" class="banner">
+
+<p>OUR SERVICES<br><br>We will provide a complete suite of services to help college students create a...<a id="more" href="services.html">read more</a>
+</p>
+
+<br><br>
+<p> <br>MISSION<br><br>Our mission is to provide front-end developer services to students that ensure the successful completion of their projects and capstone projects. We will strive to create a collaborative team atmosphere that is focused on the success...
+<a id="more" href="about.html">read more</a>
+</p>
+<br><br>
+<p> VISION<br><br>
+Our vision is to be the premier front-end development service provider for students and their projects and capstone projects. We will create an environment of trust, respect, and collaboration that encourages students to reach their full potential. We will provide the highest quality service and support to ensure...<a id="more" href="about.html">read more</a></p>
+
+<br><br>
+<p><br><br>
+  Dear Our Clients,
+<br><br>
+We are excited to have the opportunity to work with you on your front-end development project. At your service, we pride ourselves...<a id="more" href="clients.html">read more</a></p>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+</script>
+</body>
+</html>

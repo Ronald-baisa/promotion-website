@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title></title>
+</head>
+<style>
+  body {
+ margin: 0;
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+  font-family: "Times New Roman";
+}
+.topnav #myLinks {
+  display: none;
+}
+.topnav #myLinks a {
+  font-size: 15px;
+}
+.topnav a {
+  color: white;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 20;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+.bg {
+  position: relative;
+  width: 100%;
+  height: 120px;
+}
+.text {
+  position: relative;
+  top: -150px;
+  color: white;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  font-family: "Times New Roman";
+  text-align: center;
+  text-shadow: 1px 1px black;
+}
+/* BOXES */
+.boxes {
+  position: relative;
+  top: 100px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.arrow-btn {
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.boxes-container {
+  padding: 5vw 5vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  
+}
+
+.boxes-container::-webkit-scrollbar {
+  display: none;
+}
+
+.box-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 400px;
+  margin-right: 30px;
+}
+
+.box-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border: solid 4px black;
+}
+
+.image-thumb {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.click-tag {
+  position: absolute;
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ff7d7d;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+}
+.click-tag:hover {
+  background: none;
+  color: none;
+  
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 90%;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+  font-family: "Times New Roman";
+}
+
+.box-card:hover .card-btn {
+  opacity: 1;
+  background-color: white;
+  
+}
+
+.card-btn:hover {
+  background: white;
+  color: red;
+}
+
+.info {
+  width: 100%;
+  height: 40px;
+  padding-top: 0;
+  background-color: transparent;
+  
+}
+
+.box-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Times New Roman";
+  padding-top: 10px;
+  font-size: 15px;
+}
+.pre-btn,
+.nxt-btn {
+  border: none;
+  position: absolute;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  z-index: 8;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pre-btn {
+  left: 5px;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 5px;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 1;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+.footer {
+  font-family: "Times New Roman";
+  font-size: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  .topnav {
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+  font-family: "Times New Roman";
+}
+
+.topnav #myLinks {
+  display: none;
+}
+.topnav #myLinks a {
+  font-size: 50px;
+}
+.topnav a {
+  color: white;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 40px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 20;
+}
+.fa {
+  font-size: 40px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+.active {
+  background-color: black;
+  color: white;
+}
+.bg {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 10vh;
+}
+.text {
+  position: relative;
+  top: -450px;
+  color: white;
+  border: none;
+  background-color: transparent;
+  font-size: 70px;
+  font-family: "Times New Roman";
+  text-align: center;
+  text-shadow: 1px 1px black;
+}
+/* BOXES */
+.boxes {
+  position: relative;
+  top: 550px;
+  overflow: hidden;
+  padding: 20px;
+}
+.boxes-container {
+  padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.boxes-container::-webkit-scrollbar {
+  display: none;
+}
+
+.box-card {
+  flex: 0 0 auto;
+  width: 450px;
+  height: 650px;
+  margin-right: 40px;
+}
+
+.box-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border: 5px solid black;
+}
+
+.image-thumb {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.click-tag {
+  position: absolute;
+  background-color: lightpink;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ff7d7d;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+}
+.click-tag:hover {
+  background: none;
+  color: none;
+  
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 90%;
+  height: 50px;
+  font-size: 30px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+  font-family: "Times New Roman";
+}
+
+.box-card:hover .card-btn {
+  opacity: 1;
+  background-color: white;
+  
+}
+
+.card-btn:hover {
+  background: white;
+  color: red;
+}
+
+.info {
+  width: 100%;
+  height: 40px;
+  padding-top: 0;
+  
+}
+
+.box-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Times New Roman";
+  padding-top: 10px;
+  font-size: 30px;
+}
+.pre-btn,
+.nxt-btn {
+  position: absolute;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 8;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 40px;
+}
+
+.pre-btn {
+  left: 10px;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 10px;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 1;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+footer {
+  font-family: "Times New Roman";
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+}
+
+}
+</style>
+<body>
+<div class="topnav">
+  <a class="active">FOOD CRAVINGS</a>
+
+  <div id="myLinks">
+    <a href="#"></i>Home</a>
+    <a href="#">RESERVATION</a>
+    <a href="#">FOOD MENU</a>
+    <a href="#">SALES</a>
+    <a href="index.html">ABOUT US</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+   <div class="bg">
+    <center><img id="img-bg"src="bg.png" width="100%" height="50%"  alt="">
+  <p class="text"></p></center>
+  </div>
+  
+  
+      <section class="boxes"> 
+        <h2 class="arrow-btn"></h2>
+        <button class="pre-btn" ><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
+        
+<!-- BOX_1 -->           
+  <div class="boxes-container">
+     <div class="box-card">
+         <div class="box-image">
+           
+        <img src="card1.jpeg" class="image-thumb" alt="">
+          <a href="index.html"><button  class="card-btn">tap to view</button> </a>
+                </div>
+        <div class="info">
+            <h2 class="box-title">Vegetables</h2>
+                </div>
+            </div>
+            
+<!-- BOX_2 -->            
+    <div class="box-card">
+       <div class="box-image">
+
+          <img src="card2.jpeg" class="image-thumb" alt="">
+            <button class="card-btn">top to view</button>
+           </div>
+     <div class="info">
+       <h2 class="box-title">Fruit's</h2>
+            </div>
+       </div>
+            
+<!-- BOX_3 -->        
+    <div class="box-card">
+       <div class="box-image">
+
+          <img src="card3.jpeg" class="image-thumb" alt="">
+            <button class="card-btn">top to view</button>
+           </div>
+     <div class="info">
+       <h2 class="box-title">Meat's</h2>
+            </div>
+       </div>     
+<!-- BOX_4 -->        
+    <div class="box-card">
+       <div class="box-image">
+
+          <img src="card4.jpeg" class="image-thumb" alt="">
+            <button class="card-btn">top to view</button>
+           </div>
+     <div class="info">
+       <h2 class="box-title">Drink's</h2>
+            </div>
+       </div>
+ </div>
+ <br>
+</div>
+     <div class="footer">
+ <footer>
+<p>©2022 Alright Reserve Terms of Use and Privacy Policy</p>
+</footer>
+ </div>
+<script>
+  function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+} 
+</script>
+<script>
+
+const boxesContainers = [...document.querySelectorAll('.boxes-container')];
+
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+boxesContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})</script>
+<script src="https://kit.fontawesome.com/f0bf10592e.js" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
